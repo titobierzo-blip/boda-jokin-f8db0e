@@ -17,13 +17,8 @@ html,body{
   overflow:hidden;
 }
 
-/* ── CANVAS PARTICLES ── */
-#particles{
-  position:fixed;inset:0;z-index:0;
-  pointer-events:none;
-}
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none;}
 
-/* ── PHONE FRAME ── */
 .phone-frame{
   position:relative;z-index:1;
   width:100%;max-width:430px;
@@ -33,7 +28,6 @@ html,body{
   background:linear-gradient(160deg,#0c0900 0%,#080600 40%,#0a0700 100%);
 }
 
-/* ── MUSIC BAR ── */
 .music-bar{
   position:fixed;top:0;left:50%;transform:translateX(-50%);
   width:100%;max-width:430px;
@@ -52,66 +46,24 @@ html,body{
   cursor:pointer;transition:all .2s;
   backdrop-filter:blur(4px);
 }
-.music-btn:hover{border-color:rgba(201,169,110,.5);}
 .music-icon{font-size:11px;color:#c9a96e;}
 .music-label{font-size:9px;letter-spacing:.2em;color:#555;text-transform:uppercase;}
 #yt-player{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;}
 
-/* ── PAGES (full viewport steps) ── */
-.pages{
-  flex:1;
-  display:flex;flex-direction:column;
-  overflow:hidden;
-}
-
-.page{
-  display:none;
-  flex-direction:column;
-  height:100vh;
-  overflow-y:auto;
-  overflow-x:hidden;
-  scrollbar-width:none;
-  padding-top:2.5rem;
-}
+.pages{flex:1;display:flex;flex-direction:column;overflow:hidden;}
+.page{display:none;flex-direction:column;height:100vh;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;padding-top:2.5rem;}
 .page::-webkit-scrollbar{display:none;}
 .page.active{display:flex;}
 
-/* ── HERO PAGE ── */
-.hero-page{
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:3rem 1.5rem 2rem;
-  position:relative;
-}
-
-.hero-glow{
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% 30%,rgba(201,169,110,.12) 0%,transparent 65%);
-  pointer-events:none;
-}
-
-.ornament{
-  font-size:9px;letter-spacing:.45em;color:#c9a96e;
-  text-transform:uppercase;margin-bottom:2rem;display:block;position:relative;
-}
+.hero-page{align-items:center;justify-content:center;text-align:center;padding:3rem 1.5rem 2rem;position:relative;}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(201,169,110,.12) 0%,transparent 65%);pointer-events:none;}
+.ornament{font-size:9px;letter-spacing:.45em;color:#c9a96e;text-transform:uppercase;margin-bottom:2rem;display:block;position:relative;}
 .ornament::before,.ornament::after{content:'◆';font-size:5px;margin:0 .5em;vertical-align:middle;color:#2e2010;}
 
-.names{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(3rem,14vw,5rem);font-weight:400;line-height:1;
-  letter-spacing:-.02em;color:#f5f0e8;margin-bottom:.15rem;
-}
+.names{font-family:'Playfair Display',serif;font-size:clamp(3rem,14vw,5rem);font-weight:400;line-height:1;letter-spacing:-.02em;color:#f5f0e8;margin-bottom:.15rem;}
 .names em{font-style:italic;color:#c9a96e;}
-.ampersand{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(1.8rem,7vw,3rem);color:#2a1a05;display:block;margin:.1rem 0;
-}
-.divider-line{
-  width:1px;height:50px;
-  background:linear-gradient(to bottom,transparent,rgba(201,169,110,.6),transparent);
-  margin:1.8rem auto;
-}
+.ampersand{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,7vw,3rem);color:#2a1a05;display:block;margin:.1rem 0;}
+.divider-line{width:1px;height:50px;background:linear-gradient(to bottom,transparent,rgba(201,169,110,.6),transparent);margin:1.8rem auto;}
 .date-block{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-bottom:.6rem;}
 .date-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:400;line-height:1;color:#f5f0e8;}
 .date-sep{width:.5px;height:38px;background:#1e1600;}
@@ -125,255 +77,78 @@ html,body{
 .start-btn{
   background:rgba(201,169,110,.08);
   border:.5px solid rgba(201,169,110,.4);
-  border-radius:4px;
-  padding:1rem 2.5rem;
-  color:#c9a96e;
-  font-family:'Jost',sans-serif;font-size:11px;
+  border-radius:4px;padding:1rem 2.5rem;
+  color:#c9a96e;font-family:'Jost',sans-serif;font-size:11px;
   letter-spacing:.35em;text-transform:uppercase;
-  cursor:pointer;transition:all .3s;
-  position:relative;overflow:hidden;
-}
-.start-btn:hover{background:rgba(201,169,110,.14);border-color:rgba(201,169,110,.7);}
-.start-btn::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent,rgba(201,169,110,.12),transparent);
-  transform:translateX(-100%);transition:transform .6s;
-}
-.start-btn:hover::before{transform:translateX(100%);}
-
-/* ── RSVP PAGES ── */
-.rsvp-page{
-  padding:2.5rem 1.2rem 1.5rem;
-  justify-content:space-between;
-  min-height:100vh;
+  cursor:pointer;transition:all .3s;position:relative;overflow:hidden;
 }
 
-.page-header{
-  text-align:center;margin-bottom:1.5rem;
-}
-.page-title{
-  font-family:'Playfair Display',serif;font-size:1.4rem;color:#f5f0e8;margin-bottom:.3rem;
-}
+.rsvp-page{padding:2.5rem 1.2rem 1.5rem;justify-content:space-between;min-height:100vh;}
+.page-header{text-align:center;margin-bottom:1.5rem;}
+.page-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:#f5f0e8;margin-bottom:.3rem;}
 .page-sub{font-size:11px;color:#3a2a10;letter-spacing:.07em;}
 
-.page-body{flex:1;}
-.page-footer{padding-top:1rem;}
-
-/* Progress bar */
-.progress-bar{
-  display:flex;gap:4px;justify-content:center;margin-bottom:1.5rem;
-}
-.progress-dot{
-  width:24px;height:2px;border-radius:2px;
-  background:#1a1200;transition:background .3s;
-}
+.progress-bar{display:flex;gap:4px;justify-content:center;margin-bottom:1.5rem;}
+.progress-dot{width:24px;height:2px;border-radius:2px;background:#1a1200;transition:background .3s;}
 .progress-dot.done{background:#c9a96e;}
 .progress-dot.active{background:rgba(201,169,110,.5);}
 
-/* ── FIELDS ── */
 .field-group{margin-bottom:.9rem;}
 .field-label{font-size:9px;letter-spacing:.3em;color:#3a2a10;text-transform:uppercase;display:block;margin-bottom:.4rem;}
 .field-input{
   width:100%;background:rgba(201,169,110,.03);
   border:.5px solid rgba(201,169,110,.12);border-radius:3px;
   padding:.75rem .9rem;color:#f5f0e8;
-  font-family:'Jost',sans-serif;font-size:14px;font-weight:300;
-  outline:none;transition:border-color .2s;-webkit-appearance:none;
+  font-family:'Jost',sans-serif;font-size:14px;outline:none;
 }
-.field-input:focus{border-color:rgba(201,169,110,.4);}
-.field-input::placeholder{color:#2a1e08;}
 .phone-row{display:flex;gap:.5rem;}
 .phone-prefix{width:68px;flex-shrink:0;text-align:center;}
 
-/* ── ATTEND ── */
 .attend-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:.5rem;}
 .attend-btn{
-  padding:1.1rem .5rem;
-  border:.5px solid rgba(201,169,110,.12);border-radius:4px;
+  padding:1.1rem .5rem;border:.5px solid rgba(201,169,110,.12);border-radius:4px;
   background:rgba(201,169,110,.03);color:#3a2a10;
-  font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
-  cursor:pointer;transition:all .2s;line-height:1.4;
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;
 }
-.attend-btn:hover,.attend-btn.selected{
-  border-color:rgba(201,169,110,.5);color:#c9a96e;
-  background:rgba(201,169,110,.07);
-}
+.attend-btn.selected{border-color:rgba(201,169,110,.5);color:#c9a96e;background:rgba(201,169,110,.07);}
 
-/* ── MENU ── */
-.menu-title-big{
-  font-family:'Playfair Display',serif;
-  font-size:1.4rem;color:#c9a96e;
-  text-align:center;margin-bottom:1.1rem;font-weight:400;
-}
 .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1rem;}
 .menu-item{
   border:.5px solid rgba(201,169,110,.1);border-radius:4px;padding:1rem .6rem;
-  background:rgba(201,169,110,.02);cursor:pointer;transition:all .2s;text-align:center;
+  background:rgba(201,169,110,.02);cursor:pointer;text-align:center;
 }
-.menu-item:hover,.menu-item.selected{border-color:rgba(201,169,110,.5);background:rgba(201,169,110,.06);}
-.menu-icon{font-size:20px;display:block;margin-bottom:.3rem;}
+.menu-item.selected{border-color:rgba(201,169,110,.5);background:rgba(201,169,110,.06);}
 .menu-name{font-size:10px;letter-spacing:.2em;color:#f5f0e8;text-transform:uppercase;}
-.menu-desc{font-family:'Cormorant Garamond',serif;font-size:11px;color:#3a2a10;margin-top:.2rem;font-style:italic;}
+.menu-desc{font-family:'Cormorant Garamond',serif;font-size:11px;color:#3a2a10;font-style:italic;}
 
-.allergy-input{
-  width:100%;background:rgba(201,169,110,.02);
-  border:.5px solid rgba(201,169,110,.1);border-radius:3px;
-  padding:.7rem .9rem;color:#f5f0e8;
-  font-family:'Jost',sans-serif;font-size:13px;font-weight:300;
-  outline:none;resize:none;min-height:52px;transition:border-color .2s;-webkit-appearance:none;
-}
-.allergy-input:focus{border-color:rgba(201,169,110,.35);}
-.allergy-input::placeholder{color:#2a1e08;}
-
-/* ── GIFT ── */
 .gift-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1rem;}
-.gift-btn{
-  padding:.9rem .5rem;border:.5px solid rgba(201,169,110,.1);border-radius:4px;
-  background:rgba(201,169,110,.02);cursor:pointer;transition:all .2s;text-align:center;
-  font-family:'Jost',sans-serif;
-}
-.gift-btn:hover,.gift-btn.selected{border-color:rgba(201,169,110,.5);background:rgba(201,169,110,.06);}
-.gift-icon{font-size:20px;display:block;margin-bottom:.3rem;}
-.gift-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#f5f0e8;}
-.gift-sub{font-family:'Cormorant Garamond',serif;font-size:11px;color:#3a2a10;font-style:italic;margin-top:.15rem;}
+.gift-btn{padding:.9rem .5rem;border:.5px solid rgba(201,169,110,.1);border-radius:4px;background:rgba(201,169,110,.02);cursor:pointer;text-align:center;}
+.gift-btn.selected{border-color:rgba(201,169,110,.5);background:rgba(201,169,110,.06);}
 
-.iban-box{
-  background:rgba(201,169,110,.04);border:.5px solid rgba(201,169,110,.15);border-radius:4px;
-  padding:1rem;margin-bottom:.8rem;display:none;
-}
+.iban-box{background:rgba(201,169,110,.04);border:.5px solid rgba(201,169,110,.15);border-radius:4px;padding:1rem;margin-bottom:.8rem;display:none;}
 .iban-box.visible{display:block;}
-.iban-label-txt{font-size:9px;letter-spacing:.3em;color:#3a2a10;text-transform:uppercase;margin-bottom:.5rem;display:block;}
-.iban-number{
-  font-family:'Playfair Display',serif;font-size:.9rem;color:#c9a96e;
-  letter-spacing:.06em;word-break:break-all;margin-bottom:.7rem;
-}
-.iban-copy-btn{
-  background:transparent;border:.5px solid rgba(201,169,110,.2);border-radius:2px;
-  padding:.4rem .9rem;color:#3a2a10;cursor:pointer;
-  font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  transition:all .2s;
-}
-.iban-copy-btn:hover{border-color:rgba(201,169,110,.5);color:#c9a96e;}
+.iban-number{font-family:'Playfair Display',serif;font-size:.9rem;color:#c9a96e;margin-bottom:.7rem;}
 
-/* ── WISHES ── */
-.wish-display{
-  background:rgba(201,169,110,.03);border:.5px solid rgba(201,169,110,.1);border-radius:4px;
-  padding:1.3rem;min-height:90px;margin-bottom:.8rem;text-align:center;
-  display:flex;align-items:center;justify-content:center;
-}
-.wish-text{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:1rem;color:#c9a96e;line-height:1.7;transition:opacity .2s;
-}
-.wish-shuffle-btn{
-  width:100%;padding:.8rem;background:transparent;
-  border:.5px solid rgba(201,169,110,.15);border-radius:2px;
-  color:#3a2a10;font-family:'Jost',sans-serif;
-  font-size:10px;letter-spacing:.35em;text-transform:uppercase;
-  cursor:pointer;transition:all .2s;margin-bottom:.8rem;
-}
-.wish-shuffle-btn:hover{border-color:rgba(201,169,110,.4);color:#c9a96e;}
+.wish-display{background:rgba(201,169,110,.03);border:.5px solid rgba(201,169,110,.1);border-radius:4px;padding:1.3rem;min-height:90px;margin-bottom:.8rem;text-align:center;display:flex;align-items:center;justify-content:center;}
+.wish-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:#c9a96e;line-height:1.7;}
 
-/* ── AI ── */
-.ai-badge{
-  display:flex;align-items:center;justify-content:center;gap:5px;
-  margin:0 auto .7rem;padding:.3rem .8rem;
-  border:.5px solid rgba(201,169,110,.1);border-radius:20px;width:fit-content;
-}
-.ai-dot{width:5px;height:5px;border-radius:50%;background:#c9a96e;animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.2;}}
-.ai-label{font-size:9px;letter-spacing:.25em;color:#2a1e08;text-transform:uppercase;}
-.ai-input-row{display:flex;gap:.5rem;margin-top:.6rem;}
-.ai-text-input{
-  flex:1;background:rgba(201,169,110,.02);
-  border:.5px solid rgba(201,169,110,.1);border-radius:2px;
-  padding:.6rem .8rem;color:#f5f0e8;
-  font-family:'Jost',sans-serif;font-size:13px;font-weight:300;outline:none;-webkit-appearance:none;
-}
-.ai-text-input:focus{border-color:rgba(201,169,110,.35);}
-.ai-text-input::placeholder{color:#2a1e08;}
-.ai-send-btn{
-  background:transparent;border:.5px solid rgba(201,169,110,.2);border-radius:2px;
-  padding:0 .8rem;cursor:pointer;color:#c9a96e;font-size:13px;
-  transition:border-color .2s;min-width:40px;
-}
-.ai-send-btn:hover{border-color:rgba(201,169,110,.5);}
-.ai-response-box{
-  background:rgba(201,169,110,.03);border:.5px solid rgba(201,169,110,.08);
-  border-radius:2px;padding:1rem;margin-top:.7rem;display:none;
-}
-.ai-response-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:#6a5030;line-height:1.8;}
-
-/* ── NAV ── */
 .nav-row{display:flex;justify-content:space-between;align-items:center;padding-top:.8rem;}
-.btn-primary{
-  padding:.85rem 1.8rem;
-  background:linear-gradient(135deg,#c9a96e,#a8803a);
-  border:none;border-radius:2px;
-  color:#060400;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;
-  letter-spacing:.4em;text-transform:uppercase;cursor:pointer;transition:opacity .2s;
-}
-.btn-primary:hover{opacity:.85;}
-.btn-primary:disabled{opacity:.4;cursor:not-allowed;}
-.btn-ghost{
-  background:transparent;border:.5px solid rgba(201,169,110,.15);color:#3a2a10;
-  font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;
-  padding:.65rem 1.2rem;cursor:pointer;border-radius:2px;transition:all .2s;
-}
-.btn-ghost:hover{border-color:rgba(201,169,110,.35);color:#6a5030;}
+.btn-primary{padding:.85rem 1.8rem;background:linear-gradient(135deg,#c9a96e,#a8803a);border:none;border-radius:2px;color:#060400;font-size:10px;letter-spacing:.4em;text-transform:uppercase;cursor:pointer;}
+.btn-primary:disabled{opacity:0.5; cursor: wait;}
+.btn-ghost{background:transparent;border:.5px solid rgba(201,169,110,.15);color:#3a2a10;font-size:10px;letter-spacing:.25em;text-transform:uppercase;padding:.65rem 1.2rem;cursor:pointer;}
 
-.error-msg{font-size:10px;color:#c9a96e;margin-top:.4rem;display:none;letter-spacing:.07em;}
-
-/* ── CONFIRM / DECLINE ── */
+.error-msg{font-size:10px;color:#c9a96e;margin-top:.4rem;display:none;}
 .confirm-screen{text-align:center;padding:2rem .5rem;}
-.confirm-icon{
-  width:52px;height:52px;border:.5px solid rgba(201,169,110,.5);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;margin:0 auto 1.3rem;
-  background:rgba(201,169,110,.05);
-}
-.confirm-icon svg{width:18px;height:18px;stroke:#c9a96e;fill:none;stroke-width:1.5;}
-.confirm-title{font-family:'Playfair Display',serif;font-size:1.6rem;color:#f5f0e8;margin-bottom:.5rem;}
-.confirm-msg{font-size:12px;color:#3a2a10;line-height:1.9;}
-.summary-pill{
-  display:inline-block;padding:.25rem .8rem;
-  border:.5px solid rgba(201,169,110,.2);border-radius:20px;
-  font-size:9px;color:#c9a96e;letter-spacing:.15em;text-transform:uppercase;margin:.5rem .2rem 0;
-}
-
-/* ── FOOTER ── */
-.footer-note{
-  text-align:center;font-size:9px;color:#1a1200;
-  padding:1rem 1.5rem 1.5rem;letter-spacing:.2em;text-transform:uppercase;
-}
-
-/* ── GOLDEN SHIMMER on cards ── */
-.shimmer-card{
-  position:relative;overflow:hidden;
-}
-.shimmer-card::after{
-  content:'';position:absolute;
-  top:-50%;left:-60%;width:40%;height:200%;
-  background:linear-gradient(105deg,transparent,rgba(201,169,110,.06),transparent);
-  animation:shimmer 4s infinite;
-  pointer-events:none;
-}
-@keyframes shimmer{
-  0%{left:-60%;}
-  50%,100%{left:140%;}
-}
+.summary-pill{display:inline-block;padding:.25rem .8rem;border:.5px solid rgba(201,169,110,.2);border-radius:20px;font-size:9px;color:#c9a96e;text-transform:uppercase;margin:.5rem .2rem 0;}
 </style>
 </head>
 <body>
 
-<!-- Golden particles canvas -->
 <canvas id="particles"></canvas>
-
-<!-- Hidden YouTube audio -->
 <div id="yt-player"></div>
 
-<!-- Music toggle -->
 <div class="music-bar">
-  <button class="music-btn" id="music-btn" onclick="toggleMusic()">
+  <button class="music-btn" onclick="toggleMusic()">
     <span class="music-icon" id="music-icon">♪</span>
     <span class="music-label" id="music-label">Música</span>
   </button>
@@ -382,7 +157,6 @@ html,body{
 <div class="phone-frame">
 <div class="pages">
 
-  <!-- ══ PAGE 0: PORTADA ══ -->
   <div class="page active" id="page-0">
     <div class="hero-page">
       <div class="hero-glow"></div>
@@ -407,532 +181,234 @@ html,body{
     </div>
   </div>
 
-  <!-- ══ PAGE 1: TUS DATOS ══ -->
   <div class="page" id="page-1">
     <div class="rsvp-page">
       <div>
-        <div class="progress-bar">
-          <div class="progress-dot active"></div>
-          <div class="progress-dot"></div>
-          <div class="progress-dot"></div>
-          <div class="progress-dot"></div>
-          <div class="progress-dot"></div>
-        </div>
-        <div class="page-header">
-          <div class="page-title">Dinos quién eres</div>
-          <div class="page-sub">Para guardar tu confirmación</div>
-        </div>
-        <div class="field-group">
-          <label class="field-label">Nombre</label>
-          <input type="text" class="field-input" id="inp-nombre" placeholder="Tu nombre" autocomplete="given-name">
-        </div>
-        <div class="field-group">
-          <label class="field-label">Apellidos</label>
-          <input type="text" class="field-input" id="inp-apellidos" placeholder="Tus apellidos" autocomplete="family-name">
-        </div>
+        <div class="progress-bar"><div class="progress-dot active"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+        <div class="page-header"><div class="page-title">Dinos quién eres</div></div>
+        <div class="field-group"><label class="field-label">Nombre</label><input type="text" class="field-input" id="inp-nombre" placeholder="Tu nombre"></div>
+        <div class="field-group"><label class="field-label">Apellidos</label><input type="text" class="field-input" id="inp-apellidos" placeholder="Tus apellidos"></div>
         <div class="field-group">
           <label class="field-label">Teléfono</label>
           <div class="phone-row">
             <input type="text" class="field-input phone-prefix" id="inp-prefix" value="+34">
-            <input type="tel" class="field-input" id="inp-telefono" placeholder="600 000 000" style="flex:1;" autocomplete="tel">
+            <input type="tel" class="field-input" id="inp-telefono" placeholder="600 000 000" style="flex:1;">
           </div>
         </div>
         <span class="error-msg" id="err-1">Por favor, completa todos los campos</span>
       </div>
-      <div class="nav-row" style="justify-content:flex-end;">
-        <button class="btn-primary" onclick="goPage(2)">Continuar</button>
-      </div>
+      <div class="nav-row" style="justify-content:flex-end;"><button class="btn-primary" onclick="goPage(2)">Continuar</button></div>
     </div>
   </div>
 
-  <!-- ══ PAGE 2: ASISTENCIA ══ -->
   <div class="page" id="page-2">
     <div class="rsvp-page">
       <div>
-        <div class="progress-bar">
-          <div class="progress-dot done"></div>
-          <div class="progress-dot active"></div>
-          <div class="progress-dot"></div>
-          <div class="progress-dot"></div>
-          <div class="progress-dot"></div>
-        </div>
-        <div class="page-header">
-          <div class="page-title">¿Podrás acompañarnos?</div>
-          <div class="page-sub">Confirma antes del 15 de Junio</div>
-        </div>
+        <div class="progress-bar"><div class="progress-dot done"></div><div class="progress-dot active"></div><div class="progress-dot"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+        <div class="page-header"><div class="page-title">¿Vendrás?</div></div>
         <div class="attend-grid">
           <button class="attend-btn" id="btn-yes" onclick="selectAttend('yes')">Sí, allí estaré</button>
-          <button class="attend-btn" id="btn-no" onclick="selectAttend('no')">Lo siento, no podré</button>
+          <button class="attend-btn" id="btn-no" onclick="selectAttend('no')">No podré ir</button>
         </div>
-        <span class="error-msg" id="err-2">Por favor selecciona una opción</span>
+        <span class="error-msg" id="err-2">Selecciona una opción</span>
       </div>
-      <div class="nav-row">
-        <button class="btn-ghost" onclick="goPage(1)">Atrás</button>
-        <button class="btn-primary" onclick="goPage(3)">Continuar</button>
-      </div>
+      <div class="nav-row"><button class="btn-ghost" onclick="goPage(1)">Atrás</button><button class="btn-primary" onclick="goPage(3)">Continuar</button></div>
     </div>
   </div>
 
-  <!-- ══ PAGE 3: MENÚ ══ -->
   <div class="page" id="page-3">
     <div class="rsvp-page">
       <div>
-        <div class="progress-bar">
-          <div class="progress-dot done"></div>
-          <div class="progress-dot done"></div>
-          <div class="progress-dot active"></div>
-          <div class="progress-dot"></div>
-          <div class="progress-dot"></div>
-        </div>
-        <div class="menu-title-big">Selecciona segundo plato</div>
+        <div class="progress-bar"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot active"></div><div class="progress-dot"></div><div class="progress-dot"></div></div>
+        <div class="page-header"><div class="page-title">Segundo Plato</div></div>
         <div class="menu-grid">
-          <div class="menu-item shimmer-card" id="menu-carne" onclick="selectMenu('carne')">
-            <span class="menu-icon">🥩</span>
-            <div class="menu-name">Carne</div>
-            <div class="menu-desc">Solomillo al punto</div>
-          </div>
-          <div class="menu-item shimmer-card" id="menu-pescado" onclick="selectMenu('pescado')">
-            <span class="menu-icon">🐟</span>
-            <div class="menu-name">Pescado</div>
-            <div class="menu-desc">Merluza en salsa verde</div>
-          </div>
-          <div class="menu-item shimmer-card" id="menu-vegano" onclick="selectMenu('vegano')">
-            <span class="menu-icon">🌿</span>
-            <div class="menu-name">Vegano</div>
-            <div class="menu-desc">Risotto de temporada</div>
-          </div>
-          <div class="menu-item shimmer-card" id="menu-vegetariano" onclick="selectMenu('vegetariano')">
-            <span class="menu-icon">🥗</span>
-            <div class="menu-name">Vegetariano</div>
-            <div class="menu-desc">Pasta con verduras</div>
-          </div>
+          <div class="menu-item" id="menu-carne" onclick="selectMenu('carne')"><div class="menu-name">🥩 Carne</div></div>
+          <div class="menu-item" id="menu-pescado" onclick="selectMenu('pescado')"><div class="menu-name">🐟 Pescado</div></div>
+          <div class="menu-item" id="menu-vegano" onclick="selectMenu('vegano')"><div class="menu-name">🌿 Vegano</div></div>
         </div>
-        <div class="field-group">
-          <label class="field-label">Alergias o intolerancias</label>
-          <textarea class="allergy-input" id="inp-alergias" placeholder="Gluten, lactosa, frutos secos… (opcional)"></textarea>
-        </div>
-        <span class="error-msg" id="err-3">Por favor selecciona un plato</span>
+        <div class="field-group"><label class="field-label">Alergias</label><textarea class="field-input" id="inp-alergias" style="min-height:60px"></textarea></div>
       </div>
-      <div class="nav-row">
-        <button class="btn-ghost" onclick="goPage(2)">Atrás</button>
-        <button class="btn-primary" onclick="goPage(4)">Continuar</button>
-      </div>
+      <div class="nav-row"><button class="btn-ghost" onclick="goPage(2)">Atrás</button><button class="btn-primary" onclick="goPage(4)">Continuar</button></div>
     </div>
   </div>
 
-  <!-- ══ PAGE 4: REGALO ══ -->
   <div class="page" id="page-4">
     <div class="rsvp-page">
       <div>
-        <div class="progress-bar">
-          <div class="progress-dot done"></div>
-          <div class="progress-dot done"></div>
-          <div class="progress-dot done"></div>
-          <div class="progress-dot active"></div>
-          <div class="progress-dot"></div>
-        </div>
-        <div class="page-header">
-          <div class="page-title">¿Cómo prefieres el regalo?</div>
-          <div class="page-sub">Opcional · Cualquier detalle nos alegra</div>
-        </div>
+        <div class="progress-bar"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot active"></div><div class="progress-dot"></div></div>
+        <div class="page-header"><div class="page-title">Detalle</div></div>
         <div class="gift-grid">
-          <div class="gift-btn shimmer-card" id="gift-metalico" onclick="selectGift('metalico')">
-            <span class="gift-icon">💳</span>
-            <div class="gift-label">En metálico</div>
-            <div class="gift-sub">Ingreso en cuenta</div>
-          </div>
-          <div class="gift-btn shimmer-card" id="gift-lista" onclick="selectGift('lista')">
-            <span class="gift-icon">🎁</span>
-            <div class="gift-label">Lista de bodas</div>
-            <div class="gift-sub">Os lo diremos</div>
-          </div>
-          <div class="gift-btn shimmer-card" id="gift-sorpresa" onclick="selectGift('sorpresa')">
-            <span class="gift-icon">✨</span>
-            <div class="gift-label">Sorpresa</div>
-            <div class="gift-sub">Me las arreglaré</div>
-          </div>
-          <div class="gift-btn shimmer-card" id="gift-nada" onclick="selectGift('nada')">
-            <span class="gift-icon">🤍</span>
-            <div class="gift-label">Sin regalo</div>
-            <div class="gift-sub">Con tu presencia basta</div>
-          </div>
+          <div class="gift-btn" id="gift-metalico" onclick="selectGift('metalico')">💳 Cuenta</div>
+          <div class="gift-btn" id="gift-nada" onclick="selectGift('nada')">🤍 Presencia</div>
         </div>
         <div class="iban-box" id="iban-box">
-          <span class="iban-label-txt">Número de cuenta</span>
           <div class="iban-number">ES77 0049 3713 2326 1405 1940</div>
-          <button class="iban-copy-btn" onclick="copyIBAN()">Copiar IBAN</button>
-          <span id="iban-copied" style="font-size:10px;color:#c9a96e;margin-left:.8rem;display:none;">¡Copiado!</span>
         </div>
       </div>
-      <div class="nav-row">
-        <button class="btn-ghost" onclick="goPage(3)">Atrás</button>
-        <button class="btn-primary" onclick="goPage(5)">Continuar</button>
-      </div>
+      <div class="nav-row"><button class="btn-ghost" onclick="goPage(3)">Atrás</button><button class="btn-primary" onclick="goPage(5)">Continuar</button></div>
     </div>
   </div>
 
-  <!-- ══ PAGE 5: DESEOS + IA ══ -->
   <div class="page" id="page-5">
     <div class="rsvp-page">
       <div>
-        <div class="progress-bar">
-          <div class="progress-dot done"></div>
-          <div class="progress-dot done"></div>
-          <div class="progress-dot done"></div>
-          <div class="progress-dot done"></div>
-          <div class="progress-dot active"></div>
-        </div>
-        <div class="page-header">
-          <div class="page-title">Un deseo para los novios</div>
-          <div class="page-sub">Pulsa para descubrir el tuyo</div>
-        </div>
-        <div class="wish-display">
-          <div class="wish-text" id="wish-text">Pulsa el botón para descubrir tu deseo…</div>
-        </div>
-        <button class="wish-shuffle-btn" onclick="shuffleWish()">✦ &nbsp; Siguiente deseo</button>
-
-        <div class="ai-badge">
-          <div class="ai-dot"></div>
-          <span class="ai-label">IA · Mensaje personalizado</span>
-        </div>
-        <textarea class="allergy-input" id="inp-mensaje" placeholder="O escribe tu propio mensaje…" style="min-height:60px;"></textarea>
-        <div class="ai-input-row">
-          <input type="text" class="ai-text-input" id="ai-prompt" placeholder="Ej: algo emotivo y con humor…">
-          <button class="ai-send-btn" id="ai-send-btn" onclick="generateMessage()">✦</button>
-        </div>
-        <div class="ai-response-box" id="ai-box">
-          <div class="ai-response-text" id="ai-text"></div>
-        </div>
+        <div class="progress-bar"><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot done"></div><div class="progress-dot active"></div></div>
+        <div class="page-header"><div class="page-title">Un deseo</div></div>
+        <div class="wish-display"><div class="wish-text" id="wish-text">Haz clic abajo para inspirarte...</div></div>
+        <button class="btn-ghost" style="width:100%; margin-bottom:1rem" onclick="shuffleWish()">✨ Inspirarme</button>
+        <textarea class="field-input" id="inp-mensaje" placeholder="Tu mensaje aquí..." style="min-height:80px"></textarea>
       </div>
-      <div class="nav-row">
-        <button class="btn-ghost" onclick="goPage(4)">Atrás</button>
-        <button class="btn-primary" id="confirm-btn" onclick="submitRSVP()">Confirmar ✦</button>
-      </div>
+      <div class="nav-row"><button class="btn-ghost" onclick="goPage(4)">Atrás</button><button class="btn-primary" id="confirm-btn" onclick="submitRSVP()">Confirmar ✦</button></div>
     </div>
   </div>
 
-  <!-- ══ PAGE: CONFIRMADO ══ -->
   <div class="page" id="page-confirm">
-    <div class="rsvp-page" style="justify-content:center;">
-      <div class="confirm-screen">
-        <div class="confirm-icon">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        </div>
-        <div class="confirm-title">¡Hasta el 1 de agosto!</div>
-        <div class="confirm-msg">
-          Gracias, <span id="conf-name" style="color:#c9a96e;"></span>.<br>
-          Jokin y Noe están encantados de contarte entre sus invitados.
-        </div>
-        <div>
-          <span class="summary-pill" id="conf-menu"></span>
-          <span class="summary-pill">La Hacienda Mutilva</span>
-          <span class="summary-pill">01 · 08 · 2026</span>
-        </div>
-        <div id="conf-msg-wrap" style="margin-top:1.3rem;display:none;">
-          <div class="ai-response-text" id="conf-msg" style="text-align:center;font-size:13px;"></div>
-        </div>
-      </div>
-      <div class="footer-note">Jokin &amp; Noe · 01.08.2026 · La Hacienda Mutilva</div>
+    <div class="rsvp-page" style="justify-content:center; text-align:center;">
+      <div class="page-title" style="font-size:2rem">¡Confirmado!</div>
+      <p style="color:#c9a96e; margin-top:1rem">Gracias <span id="conf-name"></span>, vuestra respuesta ha sido guardada.</p>
+      <div class="divider-line"></div>
+      <p style="font-size:12px; color:#555">Nos vemos el 1 de Agosto de 2026</p>
     </div>
   </div>
 
-  <!-- ══ PAGE: DECLINADO ══ -->
-  <div class="page" id="page-decline">
-    <div class="rsvp-page" style="justify-content:center;">
-      <div class="confirm-screen">
-        <div class="confirm-title" style="font-size:1.3rem;">Lo sentimos mucho</div>
-        <div class="confirm-msg" style="margin-top:.6rem;">
-          <span id="dec-name" style="color:#c9a96e;"></span>, lamentamos que no puedas estar con nosotros.<br>
-          Te tendremos en nuestro corazón ese día.
-        </div>
-        <div style="margin-top:1.5rem;">
-          <span class="summary-pill" style="color:#2a1e08;border-color:#1a1200;">Respuesta registrada</span>
-        </div>
-      </div>
-      <div class="footer-note">Jokin &amp; Noe · 01.08.2026 · La Hacienda Mutilva</div>
-    </div>
-  </div>
-
-</div><!-- /pages -->
-</div><!-- /phone-frame -->
+</div>
+</div>
 
 <script>
-/* ══ GOOGLE SHEETS URL — reemplaza con tu URL real ══ */
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwToskCrwMH-wRcziZUOQvd9spYtt0fzKPXMXW7MU5j553YEnr81Pn8hKo7EcNE6Ao8sg/exec';
+/* --- CONFIGURACIÓN --- */
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzfGlDXy6G0rnVXC-UT9chP3mTMSStMbYGTc3n0QF0seGBWT37jdt48IMZv9PmETn7I/exec'; 
 
-/* ══ PARTICLES ══ */
+/* --- ESTADO --- */
+const state = { nombre: '', apellidos: '', telefono: '', attend: null, menu: null, alergias: '', regalo: null, mensaje: '' };
+
+const WISHES = [
+  'Que vuestro amor sea eterno y cada día más fuerte.',
+  'Brindo por una vida llena de risas y aventuras juntos.',
+  'Que nunca os falte un motivo para sonreír.',
+  'Lo mejor de vuestra vida empieza hoy.'
+];
+
+function shuffleWish() {
+  const wish = WISHES[Math.floor(Math.random() * WISHES.length)];
+  document.getElementById('wish-text').textContent = '« ' + wish + ' »';
+  document.getElementById('inp-mensaje').value = wish;
+}
+
+function goPage(n) {
+  if (n === 2) {
+    const nm = document.getElementById('inp-nombre').value.trim();
+    if (!nm) { document.getElementById('err-1').style.display = 'block'; return; }
+    state.nombre = nm;
+    state.apellidos = document.getElementById('inp-apellidos').value.trim();
+    state.telefono = document.getElementById('inp-prefix').value + " " + document.getElementById('inp-telefono').value;
+  }
+  if (n === 3 && !state.attend) { document.getElementById('err-2').style.display = 'block'; return; }
+  
+  // Si no viene, enviamos ya la negativa
+  if (n === 3 && state.attend === 'no') {
+      submitToSheet('No');
+      showPage('page-confirm');
+      return;
+  }
+
+  showPage('page-' + n);
+}
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function selectAttend(v) {
+  state.attend = v;
+  document.getElementById('btn-yes').classList.toggle('selected', v === 'yes');
+  document.getElementById('btn-no').classList.toggle('selected', v === 'no');
+}
+
+function selectMenu(v) {
+  state.menu = v;
+  document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('selected'));
+  document.getElementById('menu-' + v).classList.add('selected');
+}
+
+function selectGift(v) {
+  state.regalo = v;
+  document.querySelectorAll('.gift-btn').forEach(i => i.classList.remove('selected'));
+  document.getElementById('gift-' + v).classList.add('selected');
+  document.getElementById('iban-box').classList.toggle('visible', v === 'metalico');
+}
+
+async function submitRSVP() {
+  const btn = document.getElementById('confirm-btn');
+  btn.disabled = true;
+  btn.textContent = "Guardando...";
+  
+  state.alergias = document.getElementById('inp-alergias').value;
+  state.mensaje = document.getElementById('inp-mensaje').value;
+  
+  await submitToSheet('Sí');
+  document.getElementById('conf-name').textContent = state.nombre;
+  showPage('page-confirm');
+}
+
+async function submitToSheet(asistencia) {
+  const data = {
+    Nombre: state.nombre,
+    Apellidos: state.apellidos,
+    Telefono: state.telefono,
+    Asistencia: asistencia,
+    Menu: state.menu || '—',
+    Alergias: state.alergias || '—',
+    Regalo: state.regalo || '—',
+    Mensaje: state.mensaje || '—',
+    Fecha: new Date().toLocaleString()
+  };
+
+  try {
+    await fetch(WEB_APP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify(data)
+    });
+  } catch (e) { console.error(e); }
+}
+
+/* --- PARTICLES & MUSIC (Igual que el original) --- */
 (function(){
   const canvas = document.getElementById('particles');
   const ctx = canvas.getContext('2d');
   let W, H, particles = [];
-
-  function resize(){
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
+  function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize(); window.addEventListener('resize', resize);
+  for(let i=0;i<50;i++){
+    particles.push({ x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.5, vy:Math.random()*-0.5 });
   }
-  resize();
-  window.addEventListener('resize', resize);
-
-  const GOLD = [[201,169,110],[180,140,80],[220,190,130],[160,120,60]];
-
-  function rand(a,b){return a+Math.random()*(b-a);}
-
-  for(let i=0;i<90;i++){
-    const c = GOLD[Math.floor(Math.random()*GOLD.length)];
-    particles.push({
-      x:rand(0,window.innerWidth),
-      y:rand(0,window.innerHeight),
-      r:rand(.4,1.8),
-      vx:rand(-.12,.12),
-      vy:rand(-.25,-.05),
-      alpha:rand(.1,.5),
-      da:rand(.003,.008),
-      phase:rand(0,Math.PI*2),
-      color:c
-    });
-  }
-
   function draw(){
     ctx.clearRect(0,0,W,H);
-    const now = Date.now()/1000;
-    for(const p of particles){
-      p.x += p.vx;
-      p.y += p.vy;
-      if(p.y < -5) p.y = H+5;
-      if(p.x < -5) p.x = W+5;
-      if(p.x > W+5) p.x = -5;
-      const a = p.alpha*(0.5+0.5*Math.sin(now*1.2+p.phase));
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(${p.color[0]},${p.color[1]},${p.color[2]},${a})`;
-      ctx.fill();
-      /* occasional sparkle cross */
-      if(p.r>1.2 && Math.sin(now*2+p.phase)>0.7){
-        ctx.strokeStyle=`rgba(${p.color[0]},${p.color[1]},${p.color[2]},${a*.5})`;
-        ctx.lineWidth=.5;
-        ctx.beginPath();ctx.moveTo(p.x-p.r*2,p.y);ctx.lineTo(p.x+p.r*2,p.y);ctx.stroke();
-        ctx.beginPath();ctx.moveTo(p.x,p.y-p.r*2);ctx.lineTo(p.x,p.y+p.r*2);ctx.stroke();
-      }
-    }
+    ctx.fillStyle = "rgba(201,169,110,0.3)";
+    particles.forEach(p => {
+      p.y += p.vy; if(p.y < 0) p.y = H;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
+    });
     requestAnimationFrame(draw);
   }
   draw();
 })();
 
-/* ══ MUSIC via YouTube IFrame API ══ */
-let ytPlayer, musicOn = false, ytReady = false;
-
+let ytPlayer, musicOn = false;
 window.onYouTubeIframeAPIReady = function(){
-  ytReady = true;
   ytPlayer = new YT.Player('yt-player',{
-    videoId:'AJ6xSDU0gaQ', /* Lose Control - Teddy Swims official */
-    playerVars:{autoplay:0,controls:0,loop:1,playlist:'AJ6xSDU0gaQ',rel:0,modestbranding:1},
-    events:{
-      onReady:function(e){
-        e.target.setVolume(35);
-        /* auto-start on first user interaction */
-        document.addEventListener('click', function tryPlay(){
-          if(!musicOn){ e.target.playVideo(); musicOn=true; updateMusicBtn(); }
-          document.removeEventListener('click',tryPlay);
-        },{once:true});
-      }
-    }
+    videoId:'AJ6xSDU0gaQ',
+    events:{ 'onReady': (e) => e.target.setVolume(35) }
   });
 };
-
-/* Load YT API */
-(function(){
-  const tag=document.createElement('script');
-  tag.src='https://www.youtube.com/iframe_api';
-  document.head.appendChild(tag);
-})();
+(function(){ const tag=document.createElement('script'); tag.src='https://www.youtube.com/iframe_api'; document.head.appendChild(tag); })();
 
 function toggleMusic(){
-  if(!ytPlayer||!ytReady) return;
-  if(musicOn){ytPlayer.pauseVideo();musicOn=false;}
-  else{ytPlayer.playVideo();musicOn=true;}
-  updateMusicBtn();
-}
-function updateMusicBtn(){
-  document.getElementById('music-icon').textContent = musicOn ? '♫' : '♪';
+  if(!ytPlayer) return;
+  musicOn ? ytPlayer.pauseVideo() : ytPlayer.playVideo();
+  musicOn = !musicOn;
   document.getElementById('music-label').textContent = musicOn ? 'Pausa' : 'Música';
-}
-
-/* ══ STATE ══ */
-const state={nombre:'',apellidos:'',telefono:'',attend:null,menu:null,alergias:'',regalo:null,mensaje:''};
-
-const WISHES=[
-  'Que vuestro amor crezca cada día como el árbol que da sombra: lento, firme y eterno.',
-  'Ojalá cada mañana os despertéis recordando por qué os elegisteis.',
-  'Que la vida os regale tantas risas que no tengáis tiempo para las lágrimas.',
-  'Brindo porque vuestro hogar siempre huela a café recién hecho y a ganas de estar juntos.',
-  'Que los problemas os encuentren siempre de la mano.',
-  'Que seáis el refugio el uno del otro en todos los temporales que vengan.',
-  'Que vuestra historia sea tan bonita que la cuenten vuestros nietos con orgullo.',
-  'Os deseo una vida llena de viajes que descubrir y de regreso al hogar que habéis construido juntos.',
-  'Que nunca os falte un motivo para bailar juntos en la cocina.',
-  'Que el amor que hoy prometéis sea solo el comienzo de algo mucho más grande.',
-  'Ojalá cada aniversario os encuentre más enamorados que el anterior.',
-  'Que sepáis perdonaros rápido y amar despacio, sin prisa ni pausa.',
-  'Brindo por los buenos momentos que ya vivisteis y por los mejores que aún os esperan.',
-  'Que vuestro amor sea vuestro superpoder en los días grises.',
-  'Que este día sea el primero de los más felices de vuestra vida juntos.'
-];
-let wishIdx=-1;
-
-function shuffleWish(){
-  let next;
-  do{next=Math.floor(Math.random()*WISHES.length);}while(next===wishIdx&&WISHES.length>1);
-  wishIdx=next;
-  const el=document.getElementById('wish-text');
-  el.style.opacity='0';
-  setTimeout(()=>{
-    el.textContent='« '+WISHES[wishIdx]+' »';
-    el.style.opacity='1';
-    document.getElementById('inp-mensaje').value=WISHES[wishIdx];
-  },200);
-}
-
-/* ══ NAVIGATION ══ */
-function goPage(n){
-  /* validations */
-  if(n===2){
-    const nm=document.getElementById('inp-nombre').value.trim();
-    const ap=document.getElementById('inp-apellidos').value.trim();
-    const tel=document.getElementById('inp-telefono').value.trim();
-    if(!nm||!ap||!tel){document.getElementById('err-1').style.display='block';return;}
-    document.getElementById('err-1').style.display='none';
-    state.nombre=nm;state.apellidos=ap;
-    state.telefono=document.getElementById('inp-prefix').value.trim()+' '+tel;
-  }
-  if(n===3){
-    if(!state.attend){document.getElementById('err-2').style.display='block';return;}
-    document.getElementById('err-2').style.display='none';
-    if(state.attend==='no'){
-      sendToSheets({Nombre:state.nombre,Apellidos:state.apellidos,Telefono:state.telefono,Asistencia:'No',Menu:'—',Alergias:'—',Regalo:'—',Mensaje:'—',Fecha:new Date().toLocaleString('es-ES')});
-      document.getElementById('dec-name').textContent=state.nombre;
-      showPage('page-decline');return;
-    }
-  }
-  if(n===4){
-    if(!state.menu){document.getElementById('err-3').style.display='block';return;}
-    document.getElementById('err-3').style.display='none';
-    state.alergias=document.getElementById('inp-alergias').value.trim();
-  }
-  showPage('page-'+n);
-}
-
-function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  const t=document.getElementById(id);
-  if(t){t.classList.add('active');t.scrollTop=0;}
-}
-
-function selectAttend(v){
-  state.attend=v;
-  document.getElementById('btn-yes').classList.toggle('selected',v==='yes');
-  document.getElementById('btn-no').classList.toggle('selected',v==='no');
-  document.getElementById('err-2').style.display='none';
-}
-
-function selectMenu(v){
-  state.menu=v;
-  ['carne','pescado','vegano','vegetariano'].forEach(m=>{
-    document.getElementById('menu-'+m).classList.toggle('selected',m===v);
-  });
-  document.getElementById('err-3').style.display='none';
-}
-
-function selectGift(v){
-  state.regalo=v;
-  ['metalico','lista','sorpresa','nada'].forEach(g=>{
-    document.getElementById('gift-'+g).classList.toggle('selected',g===v);
-  });
-  document.getElementById('iban-box').classList.toggle('visible',v==='metalico');
-}
-
-function copyIBAN(){
-  const iban='ES7700493713232614051940';
-  if(navigator.clipboard){navigator.clipboard.writeText(iban).catch(()=>fallbackCopy(iban));}
-  else{fallbackCopy(iban);}
-  const c=document.getElementById('iban-copied');
-  c.style.display='inline';
-  setTimeout(()=>c.style.display='none',2000);
-}
-function fallbackCopy(t){
-  const ta=document.createElement('textarea');
-  ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
-}
-
-async function generateMessage(){
-  const prompt=document.getElementById('ai-prompt').value.trim();
-  if(!prompt)return;
-  const btn=document.getElementById('ai-send-btn');
-  const box=document.getElementById('ai-box');
-  const txt=document.getElementById('ai-text');
-  btn.textContent='…';btn.disabled=true;
-  box.style.display='block';txt.textContent='…';
-  try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:300,
-        messages:[{role:'user',content:`Eres un asistente que ayuda a los invitados de una boda a escribir un deseo emotivo y personal para los novios Jokin y Noe, cuya boda es el 1 de agosto de 2026 en La Hacienda Mutilva. El invitado quiere algo así: "${prompt}". Escribe SOLO el deseo (máximo 2 frases), sin saludo ni firma, en español.`}]
-      })
-    });
-    const data=await res.json();
-    const text=data.content?.[0]?.text||'¡Que vuestra historia juntos sea tan bonita como este día!';
-    txt.textContent=text;
-    document.getElementById('inp-mensaje').value=text;
-  }catch(e){
-    txt.textContent='¡Que este día sea el primero de los más felices de vuestra vida!';
-    document.getElementById('inp-mensaje').value=txt.textContent;
-  }
-  btn.textContent='✦';btn.disabled=false;
-}
-
-async function submitRSVP(){
-  state.mensaje=document.getElementById('inp-mensaje').value.trim();
-  const btn=document.getElementById('confirm-btn');
-  btn.textContent='…';btn.disabled=true;
-
-  const menuLabels={carne:'Carne · Solomillo',pescado:'Pescado · Merluza',vegano:'Vegano · Risotto',vegetariano:'Vegetariano · Pasta'};
-  const regaloLabels={metalico:'En metálico (IBAN)',lista:'Lista de bodas',sorpresa:'Sorpresa',nada:'Sin regalo'};
-
-  document.getElementById('conf-name').textContent=state.nombre;
-  document.getElementById('conf-menu').textContent=menuLabels[state.menu]||state.menu;
-  if(state.mensaje){
-    document.getElementById('conf-msg-wrap').style.display='block';
-    document.getElementById('conf-msg').textContent='« '+state.mensaje+' »';
-  }
-
-  await sendToSheets({
-    Nombre:state.nombre,
-    Apellidos:state.apellidos,
-    Telefono:state.telefono,
-    Asistencia:'Sí',
-    Menu:menuLabels[state.menu]||state.menu,
-    Alergias:state.alergias||'—',
-    Regalo:regaloLabels[state.regalo]||'—',
-    Mensaje:state.mensaje||'—',
-    Fecha:new Date().toLocaleString('es-ES')
-  });
-
-  showPage('page-confirm');
-  btn.textContent='Confirmar ✦';btn.disabled=false;
-}
-
-async function sendToSheets(data){
-  if(!SHEET_URL||SHEET_URL.includes('https://docs.google.com/spreadsheets/d/1lhlb7g890ZM_BZ3BHL5T5j7xDkj7wLTOvhNPcwKYY8A/edit?gid=0#gid=0'))return;
-  try{
-    await fetch(SHEET_URL,{
-      method:'POST',mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(data)
-    });
-  }catch(e){console.warn('Sheets:',e);}
 }
 </script>
 </body>
